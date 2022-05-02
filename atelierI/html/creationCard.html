@@ -13,7 +13,7 @@
     <body>
         <div class="ui 1 column grid">
             <div class="column">
-                <form class="ui form" action="" method="GET">
+                <form class="ui form" action="" method="POST">
                     <h3 class="ui dividing header">Création d'une carte</h3>
 
                     <div class="field"> <!--"name0"-->
@@ -42,13 +42,13 @@
                     <br />
                     <div class="field"> <!--"http://medias.3dvf.com/news/sitegrab/gits2045.jpg"-->
                         <label>Image : </label> <br />
-                        <input type="url" name="imgUrl" placeholder="http://medias.com/Image1.jpg" pattern="https://.*" size="30">
+                        <input type="url" name="imgUrl" placeholder="http://medias.com/Image1.jpg" >
                     </div>
 
                     <br />
                     <div class="field"> <!--"https://cdn.animenewsnetwork.com/thumbnails/fit600x1000/cms/feature/89858/05.jpg"-->
                         <label>Vignette : </label> <br />
-                        <input type="url" name="smallImgUrl" placeholder="http://medias.com/Vignette2.jpg" pattern="https://.*" size="30">
+                        <input type="url" name="smallImgUrl" placeholder="http://medias.com/Vignette2.jpg" >
                     </div>
 
                     <br />
@@ -78,7 +78,7 @@
                     <br />
                     <div class="field"> <!--99.51377-->
                         <label>Attack : </label> <br />
-                        <input type="number" name="attack" placeholder="00.00000">
+                        <input type="range"  name="attack" min="0" max="100.9999" placeholder="00.00000">
                     </div>
 
                     <br />
@@ -102,7 +102,28 @@
                     </div>-->
 
                     <br />
-                    <button class="ui button" type="submit" >Submit</button>
+                    <button class="ui button" type="reset" value="Reset">
+                    <br />
+                    <button class="ui button" onclick="loadDoc()" type="button" >Submit</button>
+
+                    <script>
+                        function loadDoc() {
+
+                            $.ajax({
+                                type: "POST",
+                                url: "https://asi2-backend-market.herokuapp.com/cards",
+                                
+                                //data: ,
+                                //dataType: ,
+
+                                //juste dans la console pour voir si ca marche
+                                success: function(result){
+                                    console.log(result);
+                                }
+                                
+                            })
+                        }
+                        </script>
 
                 </form>
             </div>
