@@ -51,79 +51,66 @@
                         <input type="url" name="smallImgUrl" placeholder="http://medias.com/Vignette2.jpg" >
                     </div>
 
+                <!--
                     <br />
-                    <div class="field"> <!--7-->
+                    <div class="field"> 7
                         <label>Id : </label> <br />
                         <input type="number" name="id" placeholder="0">
                     </div>
-
+                -->
                     <br />
                     <div class="field"> <!--100.0-->
                         <label>Energy : </label> <br />
-                        <input type="number" name="energy" placeholder="000.0">
+                        <input type="range" name="energy" min="0" max="9999.9999" placeholder="000.0">
                     </div>
 
                     <br />
                     <div class="field"> <!--66.83256-->
                         <label>HP : </label> <br />
-                        <input type="number" name="hp" placeholder="00.00000">
+                        <input type="range" name="hp" min="0" max="9999.9999" placeholder="00.00000">
                     </div>
 
                     <br />
                     <div class="field"> <!--46.062046-->
                         <label>Defence : </label> <br />
-                        <input type="number" name="defence" placeholder="00.00000">
+                        <input type="range" name="defence" min="0" max="9999.9999" placeholder="00.00000">
                     </div>
 
                     <br />
                     <div class="field"> <!--99.51377-->
                         <label>Attack : </label> <br />
-                        <input type="range"  name="attack" min="0" max="100.9999" placeholder="00.00000">
+                        <input type="range"  name="attack" min="0" max="9999.9999" placeholder="00.00000">
                     </div>
 
+
+                <!--
                     <br />
-                    <div class="field"> <!--6248.1675-->
+                    <div class="field"> 6248.1675
                         <label>Price :</label> <br />
-                        <input type="number" name="price" placeholder="0000.0000">
+                        <input type="range" name="price" min="0" max="9999.9999" placeholder="0000.0000">
                     </div>
 
                     <br />
-                    <div class="field"> <!--6-->
+                    <div class="field"> 6
                         <label>Id of the user :</label> <br />
                         <input type="number" name="userId" placeholder="0">
                     </div>
 
-                    <!--
+                    
                     <div class="field"> 
                         <div class="ui checkbox field">
                             <input type="checkbox" name="pvisible">
                             <label>Make my profile visible</label>
                         </div>
-                    </div>-->
+                    </div>
+                -->
 
                     <br />
-                    <button class="ui button" type="reset" value="Reset">
+                    <button class="ui button" type="reset" value="Reset">Reset</button>
                     <br />
-                    <button class="ui button" onclick="loadDoc()" type="button" >Submit</button>
+                    <button class="ui button" onclick="postName()" type="button" >Submit</button>
 
-                    <script>
-                        function loadDoc() {
-
-                            $.ajax({
-                                type: "POST",
-                                url: "https://asi2-backend-market.herokuapp.com/cards",
-                                
-                                //data: ,
-                                //dataType: ,
-
-                                //juste dans la console pour voir si ca marche
-                                success: function(result){
-                                    console.log(result);
-                                }
-                                
-                            })
-                        }
-                        </script>
+                    <script src="../js/creationJSONcard.js"></script>
 
                 </form>
             </div>
