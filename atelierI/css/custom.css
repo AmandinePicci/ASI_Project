@@ -26,3 +26,8 @@ body{
 .overflowHiden{
     overflow:  auto;
 }
+
+.form{
+    padding-left: 40%;
+    padding-top: 3%;
+}
