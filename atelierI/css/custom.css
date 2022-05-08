@@ -31,3 +31,12 @@ body{
     padding-left: 40%;
     padding-top: 3%;
 }
+
+.myCanvas{
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+    margin: auto; 
+}
