@@ -23,6 +23,7 @@ async function postName() {
                                                                 }
                                                             });
                                 const responseText = await response.text();
-                                //console.log.link ???
+                                window.location.href = "../html/affichageCard.html";
+
                                 console.log(responseText); // logs 'OK'
 }
