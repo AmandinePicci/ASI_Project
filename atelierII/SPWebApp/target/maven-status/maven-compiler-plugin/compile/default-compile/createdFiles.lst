@@ -1,0 +1,6 @@
+com\sp\repository\HeroRepository.class
+com\sp\rest\HeroRestCrt.class
+com\sp\rest\TestRestCrt.class
+com\sp\service\HeroService.class
+com\sp\SpAppHero.class
+com\sp\model\Hero.class
