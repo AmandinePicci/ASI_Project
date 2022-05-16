@@ -12,6 +12,7 @@ public class Carte {
 	private String name;
 	private String description;
 	private String family;
+	private int prix;
 	private String smallImgUrl;
 	private String imgUrl;
 	private int energy;
@@ -22,12 +23,13 @@ public class Carte {
 
 	public Carte() {}
 	
-	public Carte(int id,String name, String description, String family, String smallImgUrl, String imgUrl, int energy, int hp, int defence, int attack ) {
+	public Carte(int id,String name, String description, String family, int prix , String smallImgUrl, String imgUrl, int energy, int hp, int defence, int attack ) {
 		super();
 		this.id=id;
 		this.name = name;
 		this.description=description;
 		this.family=family;
+		this.prix=prix;
 		this.smallImgUrl=smallImgUrl;
 		this.imgUrl = imgUrl;
 		this.energy = energy;
@@ -61,6 +63,12 @@ public class Carte {
 		this.family=family;
 	}
 	
+	public int getPrix() {
+		return prix;
+	}
+	public void setPrix(int prix) {
+		this.prix = prix;
+	}
 	
 	public String getSmallImgUrl() {
 		return smallImgUrl;
@@ -119,6 +127,6 @@ public class Carte {
 
 	@Override
 	public String toString() {
-		return "CARTE ["+this.id+"]: name : "+this.name+", description : "+this.description +", famille : "+this.family +", imgUrl : "+this.imgUrl +", Vignette imgUrl : "+this.smallImgUrl +", energy : "+this.energy +", hp : "+this.hp+", defence : "+this.defence+", attack : "+this.attack;
+		return "CARTE ["+this.id+"]: name : "+this.name+", description : "+this.description +", famille : "+this.family +", prix : "+this.prix +", imgUrl : "+this.imgUrl +", Vignette imgUrl : "+this.smallImgUrl +", energy : "+this.energy +", hp : "+this.hp+", defence : "+this.defence+", attack : "+this.attack;
 	}
 }

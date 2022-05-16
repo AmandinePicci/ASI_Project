@@ -10,8 +10,4 @@ public interface CarteRepository extends CrudRepository<Carte, Integer> {
 	
 	public List<Carte> findByName(String name);
 	
-	
-	//public List<Carte> delete(int id);
-	
-	//public List<Carte> save(int id);	
 }

@@ -21,7 +21,7 @@ package com.sp.rest;
       }
       
       @RequestMapping(method=RequestMethod.POST,value="/carte")
-      public void addHero(@RequestBody Carte carte) {
+      public void addCarte(@RequestBody Carte carte) {
           cService.CreationCarte(carte);
       }
       
@@ -29,5 +29,25 @@ package com.sp.rest;
       public Carte getCarte(@PathVariable String id) {
           Carte c=cService.getCarte(Integer.valueOf(id));
           return c;
+      }
+      
+      @RequestMapping(method=RequestMethod.DELETE, value="/delete/{id}")
+      public void deleteCarte(@PathVariable String id) {
+    	  Carte c=cService.getCarte(Integer.valueOf(id));
+    	  cService.SuppressionCarte(c);
+      }
+      
+      
+      
+      @RequestMapping(method=RequestMethod.POST,value="/achat/{id_carte}/{id_utilisateur}")
+      public void Achat(@PathVariable String id_carte, @PathVariable String id_utilisateur) {
+    	  Carte c=cService.getCarte(Integer.valueOf(id_carte));
+    	  cService.achatCarte(c,Integer.valueOf(id_utilisateur));
+      }
+      
+      @RequestMapping(method=RequestMethod.POST,value="/vente/{id_carte}/{id_utilisateur}")
+      public void Vente(@PathVariable String id_carte, @PathVariable String id_utilisateur) {
+    	  Carte c=cService.getCarte(Integer.valueOf(id_carte));
+    	  cService.venteCarte(c,Integer.valueOf(id_utilisateur));
       }
   }
