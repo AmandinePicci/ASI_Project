@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+  <html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  <meta charset="UTF-8" />
+  <title>Welcome</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/static/style.css}" />
+
+  </head>
+  <div th:replace="fragments/header :: header">
+    <h1> THIS IS A DEFAULT HEADER</h1>
+  </div>
+
+  <body>
+        <h1>Welcome</h1>
+      <div id="center">
+        <input type="button" value="Buy">
+        <input type="button" value="Sell">
+        <input type="button" value="Play">
+
+
+
+        </div>
+  </body>
+</html>
