@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/main.css">
+   
+
+</head>
+
+<body>
+<header>
+    <nav class="menu" role="navigation">
+        <ul class="inner" id="inner_header">
+            <li class="li-m-link"><a href="accueil.html" class="linkMain"> Retour Accueil </a> 
+      </ul>
+    </div>
+</header> 
+
+
+    <h1> INSCRIPTION </h1>
+    <h2> Inscrivez-vous gratuitement à CARTE EN FOLIE !!</h2>
+
+    <form class="FormInscription">
+        <label id="TitreFormInscription">Formulaire d'inscription</label>
+            </br><br>
+
+            <label for="userName"> Username</label></br>
+            <input type="text" id="userName" placeholder="Player2045">
+            <br>
+            
+            <label for="mdp"> Password </label></br>
+            <input type="text" id="mdp" placeholder="mdp123">
+            <br>
+
+            <label for="argent"> Money available </label></br>
+            <input type="number" id="argent" value="0" min="0" max="500">
+            <br>
+
+    
+
+            <br>
+                <button class="Submit" onclick="SubmitFormInscription()" type="button">Submit</button>
+        </form>
+
+
+    <p>Vous êtes déjà inscrit ? Dirigez-vous vers la page de Connexion ci-dessous ↓↓</p>
+    <a href="connexion.html" class="linkConnexion"> Connexion </a> 
+
+
+</body>
+
+<footer> 
+    <script src="../js/FormCoEtIns.js"></script>
+</footer>
+</html>
