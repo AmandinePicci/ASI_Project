@@ -25,6 +25,19 @@ async function SubmitFormInscription (){
     console.log(responseText);
 
     
-    window.location.href = "marketing.html";
+    //window.location.href = "marketing.html";
 
+}
+
+
+async function Test(){
+    const response = await fetch('http://localhost:8081/jeu/getUserByUsername/Amandine', {
+                                method: 'GET',     
+                                });
+    const responseText = await response.text();
+
+    console.log(responseText);
+
+    
+    window.location.href = "http://127.0.0.1:5500/ASI_AtelierIII_Front/html/marketing.html";
 }
